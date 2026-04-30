@@ -124,6 +124,7 @@ nav li a:hover::after {
 
 .sidebar .logo {
     padding-top: 50px;
+    width: 80%;
 }
 
 .sidebar .logo img {

@@ -27,7 +27,7 @@ nav .nav-links {
     list-style: none;
 }
 
-.nav-links li a {
+.nav-links li a, .sidebar li a {
     font-size: clamp(0.8rem, 0.9rem, 1rem);
     text-transform: uppercase;
     font-family: 'inter', sans-serif;
@@ -40,12 +40,12 @@ nav .nav-links {
     white-space: nowrap;
 }
 
-.nav-links li a:hover {
+.nav-links li a:hover, .sidebar li a:hover {
     transform: translateY(-6px);
     opacity: 1 !important;
 }
 
-nav li a::after {
+nav li a::after, .sidebar li a::after {
   content: '';
   display: block;
   width: 0;
@@ -114,10 +114,11 @@ nav li a:hover::after {
 
 #more-link {
     display: none;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'inter', sans-serif;
     color: white;
+    border: 2px solid white;
+    padding: 8px 12px;
     text-decoration: none;
-    font-weight: bold;
     white-space: nowrap;
 }
 

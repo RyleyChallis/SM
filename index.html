@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preload" as="image" href="img/bg.webp" fetchpriority="high">
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SmileWorks | Precision Dentistry & Dental Implants Sussex</title>
@@ -10,13 +12,13 @@
     <meta name="author" content="Your Name/Agency Name">
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://your-github-username.github.io/smileworks-rebuild/">
+    <meta property="og:url" content="https://ryleychallis.github.io/SM/">
     <meta property="og:title" content="SmileWorks | Precision Dentistry Brighton">
     <meta property="og:description" content="Modern, life-transforming dental care in the heart of Brighton. Book your consultation today.">
     <meta property="og:image" content="css/img/opengraph.png">
 
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://your-github-username.github.io/smileworks-rebuild/">
+    <meta property="twitter:url" content="https://ryleychallis.github.io/SM/">
     <meta property="twitter:title" content="SmileWorks | Precision Dentistry Brighton">
     <meta property="twitter:description" content="Modern, life-transforming dental care in the heart of Brighton. Book your consultation today.">
     <meta property="twitter:image" content="css/img/opengraph.png">
@@ -24,7 +26,7 @@
     <meta name="robots" content="index, follow">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="language" content="English">
-    <link rel="canonical" href="https://your-github-username.github.io/smileworks-rebuild/" />
+    <link rel="canonical" href="https://ryleychallis.github.io/SM/">
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="theme-color" content="#000000"> <link rel="icon" type="image/png" href="css/img/logo.png">
@@ -73,6 +75,183 @@
     }
     }
     </script>
+    <style>
+        nav {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+
+    min-height: 14vh;
+    padding: 20px 40px;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    backdrop-filter: blur(8px);
+    -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+}
+
+nav .logo img {
+    width: clamp(120px, 11vw, 90px);
+    height: auto;
+}
+
+nav .nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links li a, .sidebar li a {
+    font-size: clamp(0.8rem, 0.9rem, 1rem);
+    text-transform: uppercase;
+    font-family: 'inter', sans-serif;
+    color: white;
+    opacity: 0.7;
+    letter-spacing: 0.05em;
+
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.nav-links li a:hover, .sidebar li a:hover {
+    transform: translateY(-6px);
+    opacity: 1 !important;
+}
+
+nav li a::after, .sidebar li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: var(--main-blue);
+  transition: width .3s;
+}
+nav li a:hover::after {
+  width: 100%;
+}
+
+.nav-cta {
+    border: 2px solid var(--main-blue);
+    padding: 8px 20px;
+    border-radius: 50px;
+    color: white !important;
+    transition: all 0.3s ease;
+}
+
+.nav-cta::after {
+    display: none;
+}
+
+.nav-cta:hover {
+  background-color: var(--main-blue);
+  color: white !important;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 0;
+    position: fixed;
+    z-index: 2000;
+    top: 0;
+    right: 0;
+    background-color: rgba(10, 10, 10, 0.7); 
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+.sidebar a {
+    padding: 15px 32px;
+    text-decoration: none;
+    font-size: clamp(0.9rem, 4.5vw, 1.8rem);
+    color: white;
+    display: block;
+    transition: 0.3s;
+    font-family: 'inter', sans-serif;
+    font-weight: 300;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 36px;
+}
+
+#more-link {
+    display: none;
+    font-family: 'inter', sans-serif;
+    color: white;
+    border: 2px solid white;
+    padding: 8px 12px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.sidebar .logo {
+    padding-top: 50px;
+    width: 80%;
+}
+
+.sidebar .logo img {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+}
+header {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url("img/bg.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    justify-content: center;
+    text-align: center;
+}
+
+header .content {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    max-width: 80%;
+    margin: 0 auto;
+    gap: 25px;
+
+}
+h1 {
+    font-size: clamp(2.4rem, 8vw, 4.5rem);
+    font-family: 'playfair display', serif;
+    color: white;
+
+    line-height: 1;
+    margin: 0;
+}
+
+header .subtitle {
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    font-family: 'inter', serif;
+    color: rgba(255, 255, 255, 0.742);
+    max-width: 700px;
+    margin: 0 auto;
+
+    line-height: 1.6;
+}
+    </style>
 </head>
 <body>
     <div id="mobile-sidebar" class="sidebar">

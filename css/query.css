@@ -1,0 +1,8 @@
+@media (max-width: 832px) {
+    .nav-links a {
+        display: none;
+    }
+    #more-link {
+        display: flex;
+    }
+}
